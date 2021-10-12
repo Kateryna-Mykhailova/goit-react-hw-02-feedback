@@ -1,9 +1,14 @@
 import React from 'react';
 import './App.css';
-// import Feedback from ';
+
+import Feedback from './components/Feedback/Feedback';
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Feedback />
+    </div>
+  );
 }
 
 export default App;
