@@ -19,7 +19,17 @@ class Feedback extends React.Component {
     }));
   };
 
-  // countTotalFeedback();
+  countTotalFeedback = () => {
+    return this.state.bad + this.state.neutral + this.state.good;
+    // this.setState(prevState => (
+    //     prevState.bad + 1
+    //  ))
+  };
+
+  // countPositiveFeedbackPercentage = () => {
+  //     return (this.state.good * 100 /(this.state.bad + this.state.neutral +this.state.good))
+  // }
+  //     ;
   // countPositiveFeedbackPercentage();
 
   render() {
@@ -31,6 +41,8 @@ class Feedback extends React.Component {
             good={this.state.good}
             neutral={this.state.neutral}
             bad={this.state.bad}
+            total={this.countTotalFeedback()}
+            // positivePercentage={this.countPositiveFeedbackPercentage()}
           />
         </Section>
 
