@@ -1,14 +1,29 @@
 import React from 'react';
-
+import styles from './FeedbackOptions.module.css';
 const FeedbackOptions = ({ onIncrementBad }) => (
-  <div>
-    <button type="button" className="Feedback_btn">
+  <div className={styles.feedback_btn_container}>
+    <button
+      className={styles.feedback_btn}
+      name="good"
+      type="button"
+      onClick={onIncrementBad}
+    >
       Good
     </button>
-    <button type="button" className="Feedback_btn">
+    <button
+      className={styles.feedback_btn}
+      name="neutral"
+      type="button"
+      onClick={onIncrementBad}
+    >
       Neutral
     </button>
-    <button type="button" onClick={onIncrementBad} className="Feedback_btn">
+    <button
+      className={styles.feedback_btn}
+      name="bad"
+      type="button"
+      onClick={onIncrementBad}
+    >
       Bad
     </button>
   </div>
