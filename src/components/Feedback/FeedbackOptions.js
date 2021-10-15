@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './FeedbackOptions.module.css';
+
 const FeedbackOptions = ({ onIncrementBad }) => (
   <div className={styles.feedback_btn_container}>
     <button
